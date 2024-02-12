@@ -8,7 +8,7 @@ const NavBar = () => {
     return (
         <Navbar bg="primary" variant="dark" expand="lg" className="mt-4 mb-4 rounded">
             <Container>
-                <Navbar.Brand href="#home">Blog App</Navbar.Brand>
+                <Navbar.Brand href="/">Blog App</Navbar.Brand>
                 <Nav className="">
                     <Nav.Link as={NavLink} to="/">Home</Nav.Link>
                     <Nav.Link as={NavLink} to="/about">About</Nav.Link>

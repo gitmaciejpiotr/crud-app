@@ -1,16 +1,16 @@
-import styles from './AddPostSite.module.scss'
+import styles from './EditPostSite.module.scss'
 import { Container } from 'react-bootstrap';
 import clsx from 'clsx';
-import AddPostForm from '../../features/AddPostForm/AddPostForm';
+import EditPostForm from '../../features/EditPostForm/EditPostForm';
 
-const AddPostSite = () => {
+const EditPostSite = () => {
   return (
     <Container className='d-flex justify-content-center'>
       <div className={clsx(styles.content)}>
-        <AddPostForm />
+        <EditPostForm />
       </div>
     </Container>
   );
 };
 
-export default AddPostSite;
+export default EditPostSite;
