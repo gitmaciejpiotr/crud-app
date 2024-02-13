@@ -11,6 +11,7 @@ const NavBar = () => {
                 <Navbar.Brand href="/">Blog App</Navbar.Brand>
                 <Nav className="">
                     <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+                    <Nav.Link as={NavLink} to="/categories">Categories</Nav.Link>
                     <Nav.Link as={NavLink} to="/about">About</Nav.Link>
                 </Nav>
             </Container>

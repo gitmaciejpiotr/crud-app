@@ -1,8 +1,6 @@
-import styles from './About.module.scss'
-
 const About = () => {
     return (
-        <div className={styles.content}>
+        <div>
             <h3>About</h3>
         </div>
     );

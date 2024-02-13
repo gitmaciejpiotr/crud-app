@@ -1,4 +1,3 @@
-import styles from './ShowPost.module.scss'
 import clsx from 'clsx';
 import { getSelectedPost, deletePost } from '../../../redux/postsRedux';
 import { useSelector, useDispatch } from 'react-redux';
@@ -22,14 +21,15 @@ const ShowPost = () => {
 
     if (!post) return <Navigate to="/" />
     else return (
-        <div className={clsx(styles.content, 'd-flex flex-row justify-content-around p-3 my-3')}>
-            <div className={clsx(styles.postContent, 'd-flex flex-column my-3')}>
+        <div className={clsx('d-flex flex-row justify-content-around p-3 my-3')}>
+            <div className={clsx('d-flex flex-column my-3')}>
                 <h3>{post.title}</h3>
                 <div className='my-2'>
                     <b>Author:</b> {post.author} <br />
-                    <b>Published:</b> {post.publishedDate}
+                    <b>Published:</b> {post.publishedDate.toLocaleDateString('en-US')} <br />
+                    <b>Category:</b> {post.category}
                 </div>
-                <p>{post.content}</p>
+                <p dangerouslySetInnerHTML={{ __html: post.content }} />
             </div>
             <div className="buttons">
                 <Link key={post.id} to={"/post/edit/" + post.id} className="btn btn-outline-info mx-1">
